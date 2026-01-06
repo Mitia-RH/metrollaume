@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>PWA Metronome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+</head>
+<body>
+    <div id="start-audio-overlay">
+        <button id="start-audio-button">Start Audio</button>
+    </div>
+
+    <div class="container">
+        <h1>PWA Metronome</h1>
+        <div class="sequencer">
+            <div class="beat">
+                <input type="file" id="file-1" class="file-input" accept="audio/*">
+                <label for="file-1" class="file-label">Import Beat 1</label>
+                <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" id="volume-1">
+            </div>
+            <div class="beat">
+                <input type="file" id="file-2" class="file-input" accept="audio/*">
+                <label for="file-2" class="file-label">Import Beat 2</label>
+                <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" id="volume-2">
+            </div>
+            <div class="beat">
+                <input type="file" id="file-3" class="file-input" accept="audio/*">
+                <label for="file-3" class="file-label">Import Beat 3</label>
+                <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" id="volume-3">
+            </div>
+            <div class="beat">
+                <input type="file" id="file-4" class="file-input" accept="audio/*">
+                <label for="file-4" class="file-label">Import Beat 4</label>
+                <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" id="volume-4">
+            </div>
+        </div>
+        <div class="controls">
+            <label for="bpm">BPM: <span id="bpm-value">120</span></label>
+            <input type="range" min="40" max="240" value="120" class="bpm-slider" id="bpm">
+            <button id="play-pause-button">Play</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
