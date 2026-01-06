@@ -92,3 +92,27 @@ h1 {
     font-size: 1.5em;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .sequencer {
+        grid-template-columns: 1fr;
+    }
+
+    .file-label {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .volume-slider {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
